@@ -57,20 +57,20 @@ public class Matrix {
 
 	}
 	
+	@Override
 	public String toString(){
 		StringBuilder sb = new StringBuilder(""); 
-		for(int i =0;i< this.row ; i++){
-			for(int j = 0; j < this.col; j++){
+		for(int i =0;i< row ; i++){
+			for(int j = 0; j < col; j++){
 				sb.append(""+matrix[i][j]);
-				while(j<this.col-1){
+				if(j<this.col-1){
 					sb.append(",");
 				}								
 			}
-			while(i<this.row-1){
+			if(i<this.row-1){
 				sb.append(";");
 			}
 			
-			i++;
 		}
 		return sb.toString();
 	}
