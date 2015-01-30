@@ -30,7 +30,11 @@ public class ArrayCopier {
 			copySameLength(length);
 			
 		}
-		printResult();
+		
+	}
+	
+	public int[] getNewArray(){
+		return dst;
 	}
 	public void printResult(){
 		System.out.println("Source array: ");
