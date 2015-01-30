@@ -4,6 +4,10 @@ public class Matrix {
 	int col;
 	int row;
 	public int[][] matrix;
+	
+	public Matrix(){
+		
+	}
 
 	public Matrix(int row, int col) {
 		matrix = new int[row][col];
@@ -28,8 +32,7 @@ public class Matrix {
 	}
 	
 	public void setMatrix(String mtrx) {
-		mtrx.split(";");
-		
+			
 		String[] strArray = mtrx.split(";");
 		row = strArray.length;
 		String [] strArrayTmp = strArray[0].split(",");
