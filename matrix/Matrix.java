@@ -26,6 +26,29 @@ public class Matrix {
 		matrix[row][col] = value;
 
 	}
+	
+	public void setMatrix(String mtrx) {
+		mtrx.split(";");
+		
+		String[] strArray = mtrx.split(";");
+		row = strArray.length;
+		String [] strArrayTmp = strArray[0].split(",");
+		col = strArrayTmp.length;
+		String [][] strArrayMult = new String[row][col];
+		for (int r =0; r<strArray.length; r++){
+			String[] temp = strArray[r].split(",");
+			for (int c = 0; c<temp.length; c++ ){
+				strArrayMult[r][c] = temp[c];
+			}			
+		}
+	
+		this.matrix = new int[row][col];
+		for(int r = 0 ; r < row; r++){
+			for(int c = 0; c < col; c++){
+				matrix[r][c] = Integer.parseInt(strArrayMult[r][c]);
+			}
+		}
+	}
 
 	public void setRow(int row, String value) {
 		String[] strArray = value.split(",");
