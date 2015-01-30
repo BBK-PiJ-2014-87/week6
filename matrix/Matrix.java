@@ -61,6 +61,9 @@ public class Matrix {
 	public String toString(){
 		StringBuilder sb = new StringBuilder(""); 
 		for(int i =0;i< row ; i++){
+			if(i==0){
+				sb.append("[");
+			}
 			for(int j = 0; j < col; j++){
 				sb.append(""+matrix[i][j]);
 				if(j<this.col-1){
@@ -69,6 +72,9 @@ public class Matrix {
 			}
 			if(i<this.row-1){
 				sb.append(";");
+			}
+			if(i==row-1){
+				sb.append("]");
 			}
 			
 		}
